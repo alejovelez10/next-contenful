@@ -7,7 +7,7 @@ import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 import RichText from "../RichText";
 import Container from "./Container";
 
-function StaticPage({ staticPageTemplate }) {
+function StaticPage({ staticPageTemplate } : any) {
     return (
         <ContentfulLivePreviewProvider
             locale="en-US" // Required: allows you to set the locale once and have it reused throughout the preview.
