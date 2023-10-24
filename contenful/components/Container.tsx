@@ -7,7 +7,7 @@ import { useContentfulInspectorMode } from "@contentful/live-preview/react";
 import RichText from "../RichText";
 import { ContentfulLivePreview } from '@contentful/live-preview';
 
-function Container({ staticPageTemplate }) {
+function Container({ staticPageTemplate } : any) {
     const inspectorProps = useContentfulInspectorMode({ entryId: staticPageTemplate.sys.id });
 
     const updatedEntries = useContentfulLiveUpdates(staticPageTemplate);
