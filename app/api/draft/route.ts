@@ -10,15 +10,16 @@ export async function GET(request: Request, res: Response) {
         return new Response("Invalid token", { status: 401 });
     }
     draftMode().enable();
-    const __prerender_bypass = cookies().get("__prerender_bypass")
+    const __prerender_bypass = cookies().get("__prerender_bypass") 
     console.log("__prerender_bypass", __prerender_bypass)
-    cookies().set({
-        name: __prerender_bypass.name,
+    if (__prerender_bypass){    cookies().set({
+        name: __prerender_bypass.name  ,
         value: __prerender_bypass.value,
         sameSite: "none",
         secure: true,
-        
-      })
+
+      })}
+
     
 
 
