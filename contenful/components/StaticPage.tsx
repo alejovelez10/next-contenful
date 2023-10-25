@@ -17,7 +17,7 @@ function StaticPage({ staticPageTemplate, draftMode } : any) {
         debugMode={false} // Optional: allows you to toggle debug mode which is off by default.
       >
             <Container staticPageTemplate={staticPageTemplate} />
-            
+            <p>jejej aqui estoy</p>
             
         </ContentfulLivePreviewProvider>
     );
