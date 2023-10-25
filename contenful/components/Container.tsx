@@ -15,7 +15,6 @@ function Container({ staticPageTemplate } : any) {
 
     return (
         <main className="p-[6vw]">
-            <Link href="/">← Posts </Link>
             <div className="prose mt-8 border-t pt-8">
                 {/* Render the blog post image */}
                 {updatedEntries.image && (
