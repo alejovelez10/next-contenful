@@ -15,7 +15,7 @@ export async function GET(request: Request, res: Response) {
     cookies().set({
         name: __prerender_bypass.name,
         value: __prerender_bypass.value,
-        sameSite: "None",
+        sameSite: "none",
         secure: true,
       })
     
