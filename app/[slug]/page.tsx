@@ -54,7 +54,8 @@ async function StaticPageTemplate({ params }: StaticPageTemplateProps) {
         preview: draftMode().isEnabled,
     });
 
-    console.log('draftMode().isEnabled', draftMode().isEnabled)
+    console.log('draftMod.isEnabled', draftMode().isEnabled)
+
 
     if (!staticPageTemplate) {
         // If a blog post can't be found,
@@ -62,7 +63,7 @@ async function StaticPageTemplate({ params }: StaticPageTemplateProps) {
         return notFound();
     }
 
-    return <StaticTemplate staticPageTemplate={staticPageTemplate} />;
+    return <StaticTemplate draftMode={ draftMode().isEnabled} staticPageTemplate={staticPageTemplate} />;
 }
 
 export default StaticPageTemplate;
