@@ -51,8 +51,10 @@ async function StaticPageTemplate({ params }: StaticPageTemplateProps) {
     // using the content preview if draft mode is enabled:
     const staticPageTemplate = await fetchStaticPageTemplate({
         slug: params.slug,
-        preview: true,
+        preview: draftMode().isEnabled,
     });
+
+    console.log('draftMode().isEnabled', draftMode().isEnabled)
 
     if (!staticPageTemplate) {
         // If a blog post can't be found,

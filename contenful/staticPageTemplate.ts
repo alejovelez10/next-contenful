@@ -52,7 +52,7 @@ export async function fetchStaticPageTemplates({
     });
 
     return staticPageTemplateResult.items.map(
-        (staticPageTemplateEntry) =>
+        (staticPageTemplateEntry: any) =>
             parseContentfulStaticPageTemplate(staticPageTemplateEntry) as staticPageTemplate
     );
 }
