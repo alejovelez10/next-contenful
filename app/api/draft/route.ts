@@ -17,6 +17,7 @@ export async function GET(request: Request, res: Response) {
         value: __prerender_bypass.value,
         sameSite: "none",
         secure: true,
+        
       })
     
 
